@@ -1,6 +1,6 @@
 Package.describe({
   name: 'estacks:leaflet-draw',
-  version: '0.3.2',
+  version: '0.4',
   // Brief, one-line summary of the package.
   summary: 'Atmosphere wrapper for Leaflet-draw',
   // URL to the Git repository containing the source code for this package.
@@ -11,15 +11,15 @@ Package.describe({
 });
 
 Npm.depends({
-  "leaflet-draw": "0.3.2"
+  "leaflet-draw": "0.4.1"
 })
 
 Package.onUse(function(api) {
-  api.use(['bevanhunt:leaflet@2.0.1'])
-  api.versionsFrom('1.2');
+  api.use(['bevanhunt:leaflet@3.0.1'])
+  api.versionsFrom('1.3');
 
   api.addFiles([
-    '.npm/package/node_modules/leaflet-draw/dist/leaflet.draw-src.js',
+    '.npm/package/node_modules/leaflet-draw/dist/leaflet.draw.js',
     '.npm/package/node_modules/leaflet-draw/dist/leaflet.draw.css',
 
   ], 'client');
